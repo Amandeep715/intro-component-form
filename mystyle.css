@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    /*Primary*/
+    --red: hsl(0, 100%, 74%); 
+    --green: hsl(154, 59%, 51%);
+    /*Accent*/
+    --blue: hsl(248, 32%, 49%);
+    /*Neutral*/
+    --dark-blue: hsl(249, 10%, 26%); 
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    background-image: url("images/bg-intro-mobile.png");
+    background-size: cover;
+    background-color: var(--red);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+main {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 90px 1rem 4rem;
+}
+.intro {
+    color: #fff;
+}
+.trial-offer {
+    background-color: var(--blue);
+    color: #fff;
+    font-size: 13px;
+    max-width: 500px;
+    padding: 1rem 65px;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    box-shadow: 0 7px rgba(0, 0, 0, .2);
+}
+.trial-offer .bold {
+    font-weight: 600;
+}
+#form {
+    background-color: #fff;
+    max-width: 540px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 7px rgba(0, 0, 0, .2);
+}
+.input-box{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 20px;
+    border: 1px solid var(--grayish-blue);
+    border-radius: 5px;
+    position: relative;
+}
+.input-box::placeholder {
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+.invalid {
+    color: var(--red);
+    font-weight: 600;
+}
+.empty {
+    background-image: url("images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: center right 1rem;
+}
+.err-msg, .email-err {
+    display: none;
+    color: var(--red);
+    text-align: right;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 0;
+}
+.empty + .err-msg {
+    display: block;
+}
+.invalid ~ .email-err {
+    display: block;
+}
+#submit-btn {
+    background-color: var(--green);
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 25px;
+    border: 1px solid hsl(154, 59%, 45%);
+    border-bottom-width: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.terms {
+    color: var(--grayish-blue);
+    font-size: 12px;
+}
+.terms > a {
+    color: var(--red);
+    font-weight: 600;
+    text-decoration: none;
+}
+.attribution {
+    font-size: 14px;
+    text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (min-width: 800px) {
+    main {
+        flex-direction: row;
+    }
+    .intro {
+        text-align: left;
+        max-width: 500px;
+    }
+    .intro-title {
+        font-size: 40px;
+    }
+    .intro-text {
+        font-size: 18px;
+    }
+}
